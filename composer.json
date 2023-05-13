@@ -1,0 +1,25 @@
+{
+  "name": "starbug/routing",
+  "description": "A router designed for Starbug PHP framework.",
+  "keywords": ["router", "routing"],
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Ali Gangji",
+      "homepage": "https://github.com/cogentParadigm"
+    }
+  ],
+  "require": {
+    "starbug/http": "^0.9",
+    "nikic/fast-route": "^1.3",
+    "php-di/invoker": "^2.0"
+  },
+  "require-dev": {
+    "starbug/devel": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Starbug\\Routing\\": "src/"
+    }
+  }
+}
