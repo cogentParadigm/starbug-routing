@@ -3,7 +3,7 @@ namespace Starbug\Routing;
 
 use GuzzleHttp\Psr7\Response;
 use Psr\Http\Message\UriInterface;
-use Starbug\Http\TemplatedResponse;
+use Starbug\Templates\Http\TemplatedResponse;
 
 class Controller {
 
