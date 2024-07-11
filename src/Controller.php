@@ -29,10 +29,10 @@ class Controller {
    */
   public function forbidden($requestUri = false) {
     if ($requestUri instanceof UriInterface) {
-      $requestUri = $requestUri->getPath();
+      $requestUri = (string) $requestUri->withScheme("")->withHost("");
     }
     if (is_string($requestUri)) {
-      return $this->redirect("login?to=".$requestUri);
+      return $this->redirect("login?to=".urlencode($requestUri));
     }
     return $this->redirect("login");
   }
