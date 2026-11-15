@@ -22,5 +22,11 @@
     "psr-4": {
       "Starbug\\Routing\\": "src/"
     }
+  },
+  "extra": {
+    "starbug": {
+      "type": "module",
+      "namespace": "Starbug\\Routing"
+    }
   }
 }
