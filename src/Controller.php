@@ -29,7 +29,8 @@ class Controller {
    */
   public function forbidden($requestUri = false) {
     if ($requestUri instanceof UriInterface) {
-      $requestUri = (string) $requestUri->withScheme("")->withHost("");
+      // leaving the port behind yields a protocol relative reference like //:80/path
+      $requestUri = (string) $requestUri->withScheme("")->withHost("")->withPort(null)->withUserInfo("");
     }
     if (is_string($requestUri)) {
       return $this->redirect("login?to=".urlencode($requestUri));
